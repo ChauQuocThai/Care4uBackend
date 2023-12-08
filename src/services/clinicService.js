@@ -76,7 +76,7 @@ let getDetailClinicById = (inputId) => {
                     let doctorClinic = [];
 
                     doctorClinic = await db.Doctor_Infor.findAll({
-                        where: { ClinicId: inputId },
+                        where: { clinicId: inputId },
                         attributes: ['doctorId', 'provinceId']
                     })
                     data.doctorClinic = doctorClinic;

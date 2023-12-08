@@ -13,13 +13,13 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 app.use(cors({
-    origin:['http://localhost:3000','http://localhost:3000'],
+    origin:['care4u-frontend-mazes-projects.vercel.app','care4u-frontend-mazes-projects.vercel.app'],
     credentials:true
 }));
 
 app.use(function (req, res, next) {
 
-  res.header('Access-Control-Allow-Origin', "http://localhost:3000");
+  res.header('Access-Control-Allow-Origin', "care4u-frontend-mazes-projects.vercel.app");
   res.header('Access-Control-Allow-Headers', true);
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
